@@ -1,0 +1,18 @@
+# Nevería Luisa — PWA de ventas
+
+| Dato | Valor |
+|---|---|
+| **Alumno** | ROBLES BAILON LUISA FERNANDA |
+| **Grupo** | ING10-1 |
+| **Negocio · giro** | Nevería Luisa · Nevería y paletería: nieves de garrafa, paletas de agua y de leche y postres fríos; ideal para el calor de Hermosillo. |
+| **URL del repositorio** | https://github.com/ROBLES-BAILON-LUISA-FERNANDA/neveria-luisa-pwa_robles-bailon-luisa-fernanda |
+| **URL de GitHub Pages** | https://robles-bailon-luisa-fernanda.github.io/neveria-luisa-pwa_robles-bailon-luisa-fernanda/ |   
+
+## Historial de avances
+
+| Avance | Hash del commit entregado | Fecha |
+|---|---|---|
+| 1 | (hash del avance 1) | 11/10/2026 |
+| 2 | (hash del avance 2) | 18/10/2026 |
+| 3 | (hash del avance 3) | 25/10/2026 |
+| 4 | (se escribe en el reporte PDF) | 01/11/2026 |

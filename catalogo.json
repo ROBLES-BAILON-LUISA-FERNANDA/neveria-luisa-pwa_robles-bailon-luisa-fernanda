@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "nombre": "Limón",
+    "categoria": "Nieves de garrafa",
+    "precio": 35,
+    "stock": 20,
+    "imagen": "img/limon.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Mango",
+    "categoria": "Nieves de garrafa",
+    "precio": 35,
+    "stock": 20,
+    "imagen": "img/mango.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Guanábana",
+    "categoria": "Nieves de garrafa",
+    "precio": 40,
+    "stock": 20,
+    "imagen": "img/guanabana.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Queso con zarzamora",
+    "categoria": "Nieves de garrafa",
+    "precio": 40,
+    "stock": 20,
+    "imagen": "img/queso-zarzamora.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Coco",
+    "categoria": "Nieves de garrafa",
+    "precio": 35,
+    "stock": 20,
+    "imagen": "img/coco.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Fresa con crema",
+    "categoria": "Paletas",
+    "precio": 30,
+    "stock": 20,
+    "imagen": "img/fresa-crema.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Pepino con chile",
+    "categoria": "Paletas",
+    "precio": 30,
+    "stock": 20,
+    "imagen": "img/pepino-chile.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Nuez",
+    "categoria": "Paletas",
+    "precio": 35,
+    "stock": 20,
+    "imagen": "img/nuez.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "Chocolate rellena",
+    "categoria": "Paletas",
+    "precio": 40,
+    "stock": 20,
+    "imagen": "img/chocolate-rellena.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Paleta mangonada",
+    "categoria": "Paletas",
+    "precio": 40,
+    "stock": 20,
+    "imagen": "img/paleta-mangonada.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "Banana split",
+    "categoria": "Especiales",
+    "precio": 95,
+    "stock": 20,
+    "imagen": "img/banana-split.jpg"
+  },
+  {
+    "id": 12,
+    "nombre": "Mangonada en vaso",
+    "categoria": "Especiales",
+    "precio": 75,
+    "stock": 20,
+    "imagen": "img/mangonada-vaso.jpg"
+  },
+  {
+    "id": 13,
+    "nombre": "Raspado de tamarindo",
+    "categoria": "Especiales",
+    "precio": 45,
+    "stock": 20,
+    "imagen": "img/raspado-tamarindo.jpg"
+  },
+  {
+    "id": 14,
+    "nombre": "Malteada",
+    "categoria": "Especiales",
+    "precio": 65,
+    "stock": 20,
+    "imagen": "img/malteada.jpg"
+  },
+  {
+    "id": 15,
+    "nombre": "Cono doble",
+    "categoria": "Especiales",
+    "precio": 55,
+    "stock": 20,
+    "imagen": "img/cono-doble.jpg"
+  }
+]

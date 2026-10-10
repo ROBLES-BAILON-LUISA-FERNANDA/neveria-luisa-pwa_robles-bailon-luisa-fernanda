@@ -1,0 +1,20 @@
+:root{--azul:#1800AD;--fondo:#D9E9F7;--blanco:#FFFFFF}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Genty Sans','Poppins',Arial,sans-serif;background:var(--fondo);color:var(--azul)}
+h1,h2{font-family:'Genty','Shrikhand',cursive;margin:0}
+.encabezado{text-align:center;padding:1.5rem 1rem 1rem}
+.logo{width:min(70vw,260px);height:auto}
+.encabezado h1{font-size:2rem}
+.encabezado p{margin:.25rem 0 0}
+main{max-width:1000px;margin:0 auto;padding:0 1rem}
+.categoria h2{font-size:1.6rem;margin:1.5rem 0 .75rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem}
+.tarjeta{background:var(--blanco);border:2px solid var(--azul);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.tarjeta img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--fondo)}
+.tarjeta .info{padding:.6rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.tarjeta h3{margin:0;font-size:1rem}
+.precio{font-weight:700;font-size:1.1rem}
+.agregar{margin-top:auto;background:var(--azul);color:var(--blanco);border:0;border-radius:999px;padding:.6rem;font:inherit;font-weight:700;cursor:pointer}
+.agregar:active{transform:scale(.97)}
+.pie{margin-top:2rem;padding:1.25rem 1rem;background:var(--azul);color:var(--blanco);text-align:center;font-size:.9rem}
+.pie p{margin:.3rem 0}
