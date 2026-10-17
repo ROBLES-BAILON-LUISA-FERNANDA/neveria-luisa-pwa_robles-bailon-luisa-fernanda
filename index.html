@@ -6,27 +6,42 @@
   <title>Nevería Luisa</title>
   <meta name="theme-color" content="#1800AD">
 
+  
+
   <!-- Tipografías: Shrikhand (títulos, estilo del logo) y Poppins (textos) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Shrikhand&display=swap" rel="stylesheet">
 
+    <script>
+    try { document.documentElement.dataset.tema = localStorage.getItem("tema") || (matchMedia("(prefers-color-scheme: dark)").matches ? "noche" : "claro"); } catch (e) {}
+  </script>
+
   <link rel="stylesheet" href="css/estilos.css">
   <!-- <link rel="manifest" href="manifest.json"> -->
   <!-- <link rel="icon" href="icons/icon.svg"> -->
   <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"> -->
+
 </head>
+  
 <body>
-  <header class="encabezado">
-    <img src="icons/logo.png" alt="Logo de Nevería Luisa" class="logo">
-    <h1>Nevería Luisa</h1>
-    <p>Nieves, helados y paletas</p>
+      <header class="top">
+    <a class="marca" href="#inicio"><img src="icons/logo.png" alt="Logo de Nevería Luisa"><span>Nevería Luisa</span></a>
+    <button id="btn-tema" class="tema" type="button" aria-label="Activar modo noche">🌙</button>
   </header>
 
-  <main>
-    <section id="catalogo" aria-label="Catálogo de productos"></section>
-    <!-- <section id="carrito"></section> -->
-    <!-- <section id="mapa"></section> -->
+  <section class="hero" id="inicio">
+    <img class="hero__logo" src="icons/logo.png" alt="Mascota de Nevería Luisa">
+    <h1>Nieves, helados y paletas</h1>
+    <p>Hechas con fruta de verdad, para refrescar tu tarde en Hermosillo.</p>
+    <a class="cta" href="#catalogo">Ver el menú</a>
+  </section>
+
+    <main>
+    <div id="filtros" class="filtros" role="group" aria-label="Filtrar por categoría"></div>
+    <section id="catalogo" class="grid" aria-busy="true" aria-label="Catálogo de productos">
+      <div class="card sk"></div><div class="card sk"></div><div class="card sk"></div><div class="card sk"></div>
+    </section>
   </main>
 
   <footer class="pie">
@@ -46,5 +61,20 @@
       navigator.serviceWorker.register('sw.js');
     }
   </script> -->
+
+  <script>
+    const btnTema = document.getElementById("btn-tema");
+    function aplicarTema(tema, guardar) {
+      document.documentElement.dataset.tema = tema;
+      btnTema.textContent = tema === "noche" ? "☀️" : "🌙";
+      btnTema.setAttribute("aria-label", tema === "noche" ? "Activar modo día" : "Activar modo noche");
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", tema === "noche" ? "#12112b" : "#1800AD");
+      if (guardar) { try { localStorage.setItem("tema", tema); } catch (e) {} }
+    }
+    aplicarTema(document.documentElement.dataset.tema || "claro", false);
+    btnTema.addEventListener("click", () => {
+      aplicarTema(document.documentElement.dataset.tema === "noche" ? "claro" : "noche", true);
+    });
+  </script>
 </body>
 </html>
