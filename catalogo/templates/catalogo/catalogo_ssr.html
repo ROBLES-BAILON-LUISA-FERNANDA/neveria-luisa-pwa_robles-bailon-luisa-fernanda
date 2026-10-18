@@ -1,0 +1,28 @@
+    <!doctype html>
+    <html lang="es">
+    <head>
+    <meta charset="utf-8">
+    <title>Catálogo (SSR) — Nevería Luisa</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #F8FAFE; color: #23234a; margin: 2rem; }
+        h1 { color: #1800AD; }
+        ul { list-style: none; padding: 0; }
+        li { background: #fff; border: 1px solid #d7e0f5; border-radius: 8px; padding: .75rem 1rem; margin-bottom: .5rem; }
+        .precio { font-weight: bold; color: #1800AD; }
+    </style>
+    </head>
+    <body>
+    <h1>Nevería Luisa: catálogo renderizado en el servidor (SSR)</h1>
+    <p>Este HTML ya viene con los productos escritos. Pulsa Ctrl+U para comprobarlo.</p>
+
+    <ul>
+        {% for producto in productos %}
+        <li>
+            <strong>{{ producto.nombre }}</strong> —
+            <span class="precio">${{ producto.precio }}</span>
+            (stock: {{ producto.stock }})
+        </li>
+        {% endfor %}
+    </ul>
+    </body>
+    </html>
