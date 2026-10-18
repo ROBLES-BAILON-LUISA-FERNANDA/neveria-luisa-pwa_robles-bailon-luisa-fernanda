@@ -26,7 +26,7 @@ fetch("catalogo.json")
             <button class="agregar" type="button" aria-label="Agregar ${p.nombre} al carrito">+</button>
           </div>
         </div>`;
-      // DÍA 2: aquí se conectará el botón con el carrito
+      tarjeta.querySelector("button").addEventListener("click", () => agregarAlCarrito(p));
       catalogo.appendChild(tarjeta);
       revelar.observe(tarjeta);
     });

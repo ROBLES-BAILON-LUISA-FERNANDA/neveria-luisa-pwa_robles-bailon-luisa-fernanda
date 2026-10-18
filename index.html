@@ -27,7 +27,10 @@
 <body>
       <header class="top">
     <a class="marca" href="#inicio"><img src="icons/logo.png" alt="Logo de Nevería Luisa"><span>Nevería Luisa</span></a>
-    <button id="btn-tema" class="tema" type="button" aria-label="Activar modo noche">🌙</button>
+    <div class="acciones">
+      <button id="btn-tema" class="tema" type="button" aria-label="Activar modo noche">🌙</button>
+      <button id="btn-carrito" class="btn-carrito" type="button" aria-label="Abrir carrito">🛒<span id="carrito-contador" class="badge">0</span></button>
+    </div>
   </header>
 
   <section class="hero" id="inicio">
@@ -50,8 +53,18 @@
     <p><strong>Redes:</strong> Instagram @neverialuisa · WhatsApp 662 403 1105</p>
   </footer>
 
+    <div id="overlay" class="overlay"></div>
+  <aside id="carrito" class="drawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="drawer__head"><h2>Tu carrito</h2><button id="cerrar-carrito" type="button" aria-label="Cerrar carrito">✕</button></div>
+    <ul id="carrito-lista"></ul>
+    <div class="drawer__pie">
+      <p class="total">Total: <strong>$<span id="carrito-total">0</span></strong></p>
+      <button id="btn-vaciar" type="button" class="vaciar">Vaciar carrito</button>
+    </div>
+  </aside>
+
+  <script src="js/carrito.js"></script>
   <script src="js/csr.js"></script>
-  <!-- <script src="js/carrito.js"></script> -->
   <!-- <script src="js/notificaciones.js"></script> -->
   <!-- <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> -->
   <!-- <script src="js/geolocalizacion.js"></script> -->
