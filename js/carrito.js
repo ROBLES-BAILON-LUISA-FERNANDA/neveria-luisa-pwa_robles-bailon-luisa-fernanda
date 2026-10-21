@@ -15,6 +15,7 @@
     guardar();
     const b = $("carrito-contador");
     b.classList.remove("bump"); void b.offsetWidth; b.classList.add("bump");
+    if (typeof notificarAgregado === "function") notificarAgregado(p.nombre);   // <-- línea nueva
     }
 
     function cambiarCantidad(id, delta) {
@@ -68,3 +69,22 @@
     $("btn-vaciar").addEventListener("click", () => { carrito = []; guardar(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") abrirCarrito(false); });
     pintarCarrito();
+
+    // ===== Sincronización (avance 3) =====
+    function sincronizarCarrito() {
+    const mensaje = $("carrito-mensaje");
+    if (!navigator.onLine) {
+        mensaje.textContent = "Sin conexión: el carrito se sincronizará cuando vuelva el internet.";
+        return;
+    }
+    // En una app real aquí iría un fetch() con method "POST" al servidor
+    mensaje.textContent = carrito.length
+        ? "Carrito sincronizado con el servidor (simulado). ✓"
+        : "No hay nada que sincronizar.";
+    }
+
+    $("btn-sincronizar").addEventListener("click", sincronizarCarrito);
+    window.addEventListener("online", sincronizarCarrito);
+    window.addEventListener("offline", () => {
+    $("carrito-mensaje").textContent = "Se perdió la conexión.";
+    });

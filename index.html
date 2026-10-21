@@ -28,6 +28,7 @@
       <header class="top">
     <a class="marca" href="#inicio"><img src="icons/logo.png" alt="Logo de Nevería Luisa"><span>Nevería Luisa</span></a>
     <div class="acciones">
+      <span id="estado-conexion" class="pill">conectado</span>
       <button id="btn-tema" class="tema" type="button" aria-label="Activar modo noche">🌙</button>
       <button id="btn-carrito" class="btn-carrito" type="button" aria-label="Abrir carrito">🛒<span id="carrito-contador" class="badge">0</span></button>
     </div>
@@ -51,24 +52,28 @@
     <p><strong>Horario:</strong> Lunes a sábado 12:00 a 9:00 pm · Domingo 12:00 a 5:00 pm</p>
     <p><strong>Ubicación:</strong> Hermosillo, Sonora. Cimarrón #27</p>
     <p><strong>Redes:</strong> Instagram @neverialuisa · WhatsApp 662 403 1105</p>
+    <button id="btn-notificar" class="btn-notif" type="button">🔔 Activar notificaciones</button>
+    <p id="notificaciones-mensaje" class="mensaje"></p>
   </footer>
 
     <div id="overlay" class="overlay"></div>
   <aside id="carrito" class="drawer" aria-label="Carrito de compras" aria-hidden="true">
     <div class="drawer__head"><h2>Tu carrito</h2><button id="cerrar-carrito" type="button" aria-label="Cerrar carrito">✕</button></div>
     <ul id="carrito-lista"></ul>
-    <div class="drawer__pie">
+        <div class="drawer__pie">
       <p class="total">Total: <strong>$<span id="carrito-total">0</span></strong></p>
+      <button id="btn-sincronizar" type="button" class="vaciar">Sincronizar carrito</button>
+      <p id="carrito-mensaje" class="mensaje"></p>
       <button id="btn-vaciar" type="button" class="vaciar">Vaciar carrito</button>
     </div>
   </aside>
 
   <script src="js/carrito.js"></script>
   <script src="js/csr.js"></script>
-  <!-- <script src="js/notificaciones.js"></script> -->
+  <script src="js/notificaciones.js"></script>
   <!-- <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> -->
   <!-- <script src="js/geolocalizacion.js"></script> -->
-  <!-- <script src="js/app.js"></script> -->
+  <script src="js/app.js"></script>
   <!-- <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js');

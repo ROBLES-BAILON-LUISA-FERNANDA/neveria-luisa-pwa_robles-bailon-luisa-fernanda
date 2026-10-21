@@ -115,3 +115,14 @@ body,.top,.card,.pie,.filtros button{transition:background-color .4s,color .4s,b
 .total strong{color:var(--azul)}
 .vaciar{width:100%;padding:.7rem;border-radius:999px;border:1.5px solid var(--azul);background:var(--panel);color:var(--azul);font:inherit;font-weight:500;cursor:pointer}
 @keyframes bump{50%{transform:scale(1.5)}}
+/* ===== AVANCE 3: conexión, notificaciones y sincronización ===== */
+.pill{font-size:.72rem;font-weight:600;padding:.3rem .75rem;border-radius:999px;background:#d9f7e6;color:#0b6b3a;white-space:nowrap}
+.pill.sin-conexion{background:#ffe1e1;color:#a11d1d}
+[data-tema="noche"] .pill{background:#14532d;color:#bbf7d0}
+[data-tema="noche"] .pill.sin-conexion{background:#5b1a1a;color:#ffd1d1}
+
+.mensaje{min-height:1.2em;margin:.5rem 0;font-size:.85rem;color:var(--gris)}
+.drawer__pie .vaciar{margin-top:.4rem}
+.btn-notif{margin-top:.8rem;background:var(--azul);color:#fff;border:0;border-radius:999px;padding:.6rem 1.3rem;font:inherit;font-weight:500;cursor:pointer;transition:transform .2s}
+.btn-notif:hover{transform:translateY(-2px)}
+[data-tema="noche"] .btn-notif{color:#12112b}
