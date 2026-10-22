@@ -126,3 +126,12 @@ body,.top,.card,.pie,.filtros button{transition:background-color .4s,color .4s,b
 .btn-notif{margin-top:.8rem;background:var(--azul);color:#fff;border:0;border-radius:999px;padding:.6rem 1.3rem;font:inherit;font-weight:500;cursor:pointer;transition:transform .2s}
 .btn-notif:hover{transform:translateY(-2px)}
 [data-tema="noche"] .btn-notif{color:#12112b}
+
+/* ===== AVANCE 3: ubicación y mapa ===== */
+.visita{margin:3.5rem 0 1rem;text-align:center}
+.visita p{color:var(--gris)}
+.btn-ubic{background:var(--azul);color:#fff;border:0;border-radius:999px;padding:.7rem 1.5rem;font:inherit;font-weight:500;cursor:pointer;transition:transform .2s}
+.btn-ubic:hover{transform:translateY(-2px)}
+[data-tema="noche"] .btn-ubic{color:#12112b}
+.mapa{height:340px;margin-top:1rem;border-radius:20px;overflow:hidden;box-shadow:var(--sombra);text-align:left}
+.mapa[hidden]{display:none}

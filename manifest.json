@@ -1,0 +1,18 @@
+    {
+    "id": "./",
+    "name": "Nevería Luisa",
+    "short_name": "Nevería Luisa",
+    "description": "Nieves, helados y paletas en Hermosillo. Catálogo y carrito de compras.",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "categories": ["food", "shopping"],
+    "background_color": "#F8FAFE",
+    "theme_color": "#1800AD",
+    "icons": [
+        { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+        { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+        { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+    ]
+    }
