@@ -6,24 +6,18 @@
   <title>Nevería Luisa</title>
   <meta name="theme-color" content="#1800AD">
 
-  
-
   <!-- Tipografías: Shrikhand (títulos, estilo del logo) y Poppins (textos) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Shrikhand&display=swap" rel="stylesheet">
-
     <script>
     try { document.documentElement.dataset.tema = localStorage.getItem("tema") || (matchMedia("(prefers-color-scheme: dark)").matches ? "noche" : "claro"); } catch (e) {}
   </script>
-
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="manifest" href="manifest.json"> 
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-
 </head>
-  
 <body>
       <header class="top">
     <a class="marca" href="#inicio"><img src="icons/logo.png" alt="Logo de Nevería Luisa"><span>Nevería Luisa</span></a>
@@ -33,14 +27,12 @@
       <button id="btn-carrito" class="btn-carrito" type="button" aria-label="Abrir carrito">🛒<span id="carrito-contador" class="badge">0</span></button>
     </div>
   </header>
-
   <section class="hero" id="inicio">
     <img class="hero__logo" src="icons/logo.png" alt="Mascota de Nevería Luisa">
     <h1>Nieves, helados y paletas</h1>
     <p>Hechas con fruta de verdad, para refrescar tu tarde en Hermosillo.</p>
     <a class="cta" href="#catalogo">Ver el menú</a>
   </section>
-
     <main>
     <div id="filtros" class="filtros" role="group" aria-label="Filtrar por categoría"></div>
     <section id="catalogo" class="grid" aria-busy="true" aria-label="Catálogo de productos">
@@ -54,7 +46,6 @@
       <div id="mapa-ruta" class="mapa" hidden></div>
     </section>
   </main>
-
   <footer class="pie">
     <p><strong>Horario:</strong> Lunes a sábado 12:00 a 9:00 pm · Domingo 12:00 a 5:00 pm</p>
     <p><strong>Ubicación:</strong> Hermosillo, Sonora. Cimarrón #27</p>
@@ -62,7 +53,6 @@
     <button id="btn-notificar" class="btn-notif" type="button">🔔 Activar notificaciones</button>
     <p id="notificaciones-mensaje" class="mensaje"></p>
   </footer>
-
     <div id="overlay" class="overlay"></div>
   <aside id="carrito" class="drawer" aria-label="Carrito de compras" aria-hidden="true">
     <div class="drawer__head"><h2>Tu carrito</h2><button id="cerrar-carrito" type="button" aria-label="Cerrar carrito">✕</button></div>
@@ -74,19 +64,19 @@
       <button id="btn-vaciar" type="button" class="vaciar">Vaciar carrito</button>
     </div>
   </aside>
-
   <script src="js/carrito.js"></script>
   <script src="js/csr.js"></script>
   <script src="js/notificaciones.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="js/geolocalizacion.js"></script>
   <script src="js/app.js"></script>
-  <!-- <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js');
+    <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js")
+        .then((registro) => console.log("Service Worker registrado con éxito:", registro.scope))
+        .catch((error) => console.error("No se pudo registrar el Service Worker:", error));
     }
-  </script> -->
-
+  </script>
   <script>
     const btnTema = document.getElementById("btn-tema");
     function aplicarTema(tema, guardar) {
