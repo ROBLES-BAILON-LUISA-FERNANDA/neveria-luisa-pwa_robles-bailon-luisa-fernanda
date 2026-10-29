@@ -135,3 +135,6 @@ body,.top,.card,.pie,.filtros button{transition:background-color .4s,color .4s,b
 [data-tema="noche"] .btn-ubic{color:#12112b}
 .mapa{height:340px;margin-top:1rem;border-radius:20px;overflow:hidden;box-shadow:var(--sombra);text-align:left}
 .mapa[hidden]{display:none}
+
+.drawer{visibility:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),visibility 0s linear .35s}
+.drawer.on{visibility:visible;transition:transform .35s cubic-bezier(.2,.8,.2,1),visibility 0s}

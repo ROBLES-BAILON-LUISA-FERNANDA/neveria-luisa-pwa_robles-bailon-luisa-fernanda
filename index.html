@@ -4,23 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nevería Luisa</title>
+  <meta name="description" content="Nevería Luisa: nieves de garrafa, paletas y postres fríos en Hermosillo, con catálogo, carrito de compras y modo sin conexión.">
   <meta name="theme-color" content="#1800AD">
 
   <!-- Tipografías: Shrikhand (títulos, estilo del logo) y Poppins (textos) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Shrikhand&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Shrikhand&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Shrikhand&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Shrikhand&display=swap" rel="stylesheet"></noscript>
     <script>
     try { document.documentElement.dataset.tema = localStorage.getItem("tema") || (matchMedia("(prefers-color-scheme: dark)").matches ? "noche" : "claro"); } catch (e) {}
   </script>
+  <link rel="preload" as="image" href="icons/logo.png">
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="manifest" href="manifest.json"> 
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" media="print" onload="this.media='all'">
 </head>
 <body>
       <header class="top">
-    <a class="marca" href="#inicio"><img src="icons/logo.png" alt="Logo de Nevería Luisa"><span>Nevería Luisa</span></a>
+    <a class="marca" href="#inicio"><img src="icons/logo.png" alt="Logo de Nevería Luisa" width="42" height="42"><span>Nevería Luisa</span></a>
     <div class="acciones">
       <span id="estado-conexion" class="pill">conectado</span>
       <button id="btn-tema" class="tema" type="button" aria-label="Activar modo noche">🌙</button>
@@ -28,7 +33,7 @@
     </div>
   </header>
   <section class="hero" id="inicio">
-    <img class="hero__logo" src="icons/logo.png" alt="Mascota de Nevería Luisa">
+    <img class="hero__logo" src="icons/logo.png" alt="Mascota de Nevería Luisa" width="250" height="250">
     <h1>Nieves, helados y paletas</h1>
     <p>Hechas con fruta de verdad, para refrescar tu tarde en Hermosillo.</p>
     <a class="cta" href="#catalogo">Ver el menú</a>
@@ -54,7 +59,7 @@
     <p id="notificaciones-mensaje" class="mensaje"></p>
   </footer>
     <div id="overlay" class="overlay"></div>
-  <aside id="carrito" class="drawer" aria-label="Carrito de compras" aria-hidden="true">
+  <aside id="carrito" class="drawer" aria-label="Carrito de compras" inert>
     <div class="drawer__head"><h2>Tu carrito</h2><button id="cerrar-carrito" type="button" aria-label="Cerrar carrito">✕</button></div>
     <ul id="carrito-lista"></ul>
         <div class="drawer__pie">

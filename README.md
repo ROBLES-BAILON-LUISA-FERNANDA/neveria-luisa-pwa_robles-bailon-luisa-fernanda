@@ -15,7 +15,7 @@
 |---|---|---|
 | 1 | 66010b54a5043d689bdf1be0bde1ac4adce8b5b1 | 11/10/2026 |
 | 2 | 8b3b6accfa4f6dafc9afa2c65fa2f40ab39bf834 | 18/10/2026 |
-| 3 | (hash del avance 3) | 25/10/2026 |
+| 3 | ac2f710746c1cd5be8d3f4b7f6ca1c9474d01438 | 25/10/2026 |
 | 4 | (se escribe en el reporte PDF) | 01/11/2026 |
 
 

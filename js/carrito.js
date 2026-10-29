@@ -60,7 +60,7 @@
     function abrirCarrito(abrir) {
     $("carrito").classList.toggle("on", abrir);
     $("overlay").classList.toggle("on", abrir);
-    $("carrito").setAttribute("aria-hidden", !abrir);
+    $("carrito").inert = !abrir;
     }
 
     $("btn-carrito").addEventListener("click", () => abrirCarrito(true));
