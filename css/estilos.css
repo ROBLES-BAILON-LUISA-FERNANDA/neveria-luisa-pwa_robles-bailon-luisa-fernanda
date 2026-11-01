@@ -138,3 +138,14 @@ body,.top,.card,.pie,.filtros button{transition:background-color .4s,color .4s,b
 
 .drawer{visibility:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),visibility 0s linear .35s}
 .drawer.on{visibility:visible;transition:transform .35s cubic-bezier(.2,.8,.2,1),visibility 0s}
+
+/* ===== FONDO: HELADOS CAYENDO ===== */
+.lluvia{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+.lluvia span{position:absolute;top:-60px;opacity:.5;animation:caer linear infinite;will-change:transform}
+[data-tema="noche"] .lluvia span{opacity:.3}
+@keyframes caer{
+    0%{transform:translate3d(0,-10vh,0) rotate(0deg)}
+    50%{transform:translate3d(24px,55vh,0) rotate(25deg)}
+    100%{transform:translate3d(-16px,115vh,0) rotate(-15deg)}
+    }
+
